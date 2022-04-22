@@ -11,25 +11,26 @@
    <header>
       <div>
          <Img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIaD8gBHcXK5oMNEMpWOjfy-NCn3qC5d1M3g&usqp=CAU" alt="logo">
+   </header>
    <nav class="menu-h">
          <ul>
             <li> <a href="./index.html">Início</a></li>
-            <li> <a href="./">Admim</a></li>
-            <ul>
-                <li> <a href="./cadastrar_vagasF.html">Adicionar Vagas de Fortaleza</a></li>
-                <li> <a href="./cadastrar_vagasM.html">Adicionar Vagas de Maranguape</a></li>
-            </ul>
+            <li> <a href="./">Admim</a>
+               <ul>
+                   <li> <a href="./cadastrar_vagasF      .html">Adicionar Vagas de        Fortaleza</a></li>
+                   <li> <a href="./cadastrar_vagasM.html">Adicionar Vagas de Maranguape</a></li>
+               </ul>
+            </li>
        </ul>
    </nav>
-   </header>
    <main>
       <section>
          <h1>Vagas em Fortaleza</h1>
-         <article>
+         <article class="box">
             <a href="detalhes.html"><img src="https://escolaeducacao.com.br/wp-content/uploads/2018/10/Professor-450x300.jpg " alt=""></a>
             <p><b>PEDAGOGIA</b></p>
          </article>
-         <article>
+         <article class="box">
             <a href="detalhes.html"><img src="https://escolaeducacao.com.br/wp-content/uploads/2018/10/Professor-450x300.jpg"
               alt=""></a>
             <p><b>PEDAGOGIA</b></p>
@@ -68,24 +69,59 @@
 </body>
 </html>
     
-CSS
-    
+
   {
     margin: 0px;
     padding: 0px;
     list-style-type: none;
     text-decoration: none
 }
-
+}
+body{
+  background-color: Aquamarine;
+}
+header{
+  text-align: center;
+}
 nav{
     background-color: rgb(20, 2, 2);
 }
-.logo{
-    padding: 10px;
-}
-li{
+li a{
     list-style-type: none;
 }
 a{
     color: aliceblue;
+    text-decoration: none;
+}
+ul li{
+  display: inline;
+  position: relative;
+  padding: 100px;
+}
+ul ul{
+  display: none;
+  position: absolute;
+  left: 95px;
+  transition: .5s;
+}
+nav ul li:hover ul{
+  display: block;
+  background-color: black;
+  right: 100px;
+}
+ul li a{
+  display: inline-block;
+  padding: 50px;
+ul ul li a{
+  display: block;
+  background-color: grey;
+}
+@media(max-width:800px){
+    main{
+        align-items: unset;
+        flex-direction: colum;
+}
+article{
+	width: 250px;
+	height: 250px;
 }
