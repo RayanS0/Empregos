@@ -89,3 +89,97 @@
 </body>
 </html>
     
+*{
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-decoration: none;
+  color: white;
+  font-family: Times New Roman;
+}
+img{
+  background-color:#666;
+	border-radius: 10px;
+}
+body {
+  background-color: teal;
+}
+.logo {
+  text-align: center;
+  background-color: blue;
+  font-size: 40px;
+  padding: 20px;
+}
+.sublogo{
+  background-color: teal;
+  text-align: center;
+  font-size: 25px;
+  padding: 10px;
+}
+/*menu*/
+nav {
+  margin-top: center;
+  position: sticky;
+  top: 0;
+}
+ul {
+  background-color: #333;
+}
+ul li {
+  display: inline;
+  position: relative;
+}
+nav ul li a {
+  padding: 20px;
+  display: inline-block;
+}
+/*sub-menu*/
+nav ul li a:hover {
+  background-color: grey;
+}
+nav ul ul{
+  display: none;
+  left: 0;
+  position: absolute;
+}
+nav ul li:hover ul{
+  display: block;
+}
+section {
+  display: flex;
+  text-align: center;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+article.box {
+  padding: 60px;
+}
+article.boxtwo {
+  padding:60px;
+}
+section.secaoone article img{
+  width: 350px;
+  height: 250px;
+}
+section.secaotwo article img{
+  width: 350px;
+  height: 250px;
+}
+section h1 {
+  width: 100%;
+  padding: 10px;
+  background-color: blue;
+}
+button{
+  background-color: #003153;
+  padding: 6px;
+}
+footer{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: red;
+  color: white;
+  text-align: center;
+}
