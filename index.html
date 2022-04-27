@@ -30,12 +30,6 @@
       <section class="secaoone">
          <h1>Vagas em Fortaleza</h1>
          <article class="box">
-            <a href="detalhes.html"><img src="https://escolaeducacao.com.br/wp-content/uploads/2018/10/Professor-450x300.jpg " alt=""></a>
-            <p><b>PEDAGOGIA</b></p>
-            <button><p><b>Ver mais</b></p></button>
-         </article>
-         
-         <article class="box">
             <a href="detalhes.html"><img src="https://escolaeducacao.com.br/wp-content/uploads/2018/10/Professor-450x300.jpg"
               alt=""></a>
             <p><b>PEDAGOGIA</b></p>
@@ -43,13 +37,21 @@
          </article>
          
          <article class="box">
-            <a href="detalhes.html"><img src="https://escolaeducacao.com.br/wp-content/uploads/2018/10/Professor-450x300.jpg " alt=""></a>
+            <a href="detalhes.html"><img src="https://escolaeducacao.com.br/wp-content/uploads/2018/10/Professor-450x300.jpg "
+              alt=""></a>
             <p><b>PEDAGOGIA</b></p>
             <button><p><b>Ver mais</b></p></button>
          </article>
          
          <article class="box">
-            <a href="detalhes.html"><img src="https://escolaeducacao.com.br/wp-content/uploads/2018/10/Professor-450x300.jpg " alt=""></a>
+            <a href="detalhes.html"><img src="https://escolaeducacao.com.br/wp-content/uploads/2018/10/Professor-450x300.jpg " 
+              alt=""></a>
+            <p><b>PEDAGOGIA</b></p>
+            <button><p><b>Ver mais</b></p></button>
+         </article>
+         <article class="box">
+            <a href="detalhes.html"><img src="https://escolaeducacao.com.br/wp-content/uploads/2018/10/Professor-450x300.jpg "
+              alt=""></a>
             <p><b>PEDAGOGIA</b></p>
             <button><p><b>Ver mais</b></p></button>
          </article>
@@ -58,12 +60,6 @@
       <section class="secaotwo">
          <h1>Vagas em Maranguape</h1>
          <article class="boxtwo">
-            <a href="detalhes2.html"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRL9fZsZCnwY28JkXH3mvdNXFQ0sLOXSQz5AA&usqp=CAU   " alt=""></a>
-            <p><b>SUPERVISOR DE VENDAS</b></p>
-            <button><p><b>Ver mais</b></p></button>
-         </article>
-         
-         <article class="boxtwo">
             <a href="detalhes2.html"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRL9fZsZCnwY28JkXH3mvdNXFQ0sLOXSQz5AA&usqp=CAU  " alt=""></a>
             <p><b>SUPERVISOR DE VENDAS</b></p>
             <button><p><b>Ver mais</b></p></button>
@@ -79,7 +75,12 @@
             <a href="detalhes2.html"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRL9fZsZCnwY28JkXH3mvdNXFQ0sLOXSQz5AA&usqp=CAU  " alt=""></a>
             <p><b>SUPERVISOR DE VENDAS</b></p>
             <button><p><b>Ver mais</b></p></button>
-         </article>
+        </article>
+        <article class="boxtwo">
+           <a href="detalhes2.html"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRL9fZsZCnwY28JkXH3mvdNXFQ0sLOXSQz5AA&usqp=CAU  " alt=""></a>
+           <p><b>SUPERVISOR DE VENDAS</b></p>
+           <button><p><b>Ver mais</b></p></button>
+        </article>
       </section>
       
    </main>
@@ -88,7 +89,6 @@
 </body>
 </html>
     
-
 *{
   margin: 0;
   padding: 0;
@@ -107,10 +107,14 @@ body {
 .logo {
   text-align: center;
   background-color: blue;
+  font-size: 40px;
+  padding: 20px;
 }
 .sublogo{
   background-color: teal;
   text-align: center;
+  font-size: 25px;
+  padding: 10px;
 }
 /*menu*/
 nav {
@@ -145,17 +149,25 @@ section {
   display: flex;
   text-align: center;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 article.box {
-  padding: 20px;
+  padding: 60px;
 }
 article.boxtwo {
-  padding:20px;
+  padding:60px;
+}
+section.secaoone article img{
+  width: 350px;
+  height: 250px;
+}
+section.secaotwo article img{
+  width: 350px;
+  height: 250px;
 }
 section h1 {
   width: 100%;
-  padding: 20px;
+  padding: 10px;
   background-color: blue;
 }
 button{
@@ -163,5 +175,11 @@ button{
   padding: 6px;
 }
 footer{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
   background-color: red;
+  color: white;
+  text-align: center;
 }
