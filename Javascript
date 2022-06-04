@@ -1,0 +1,108 @@
+<script>
+    let = vagasCadastradas = [];
+    function cadastrar(vagas) {
+        alert('');
+        let nomedavaga = prompt('Nome da Vaga: ');
+        let empresa = prompt('Nome da Empresa/Órgão:b');
+        let salario = parseInt(prompt('Qual o Salário: '));
+        let qtdvagas = parseInt(prompt('Quantidade de Vagas:'));
+        let regiao = prompt('Qual Região: ');
+        let email = prompt('Qual o Email da Empresa?');
+        let telefone = parseInt(prompt('Telefone: '));
+        
+        let vaga = {
+            nomedavaga: nomedavaga,
+            empresa: empresa,
+            salario: salario,
+            qtdvagas: qtdvagas,
+            regiao: regiao,
+            email: email,
+            telefone: telefone
+        };
+        vagas.push(vaga);
+    }
+    
+    function listar(vagas) {
+        alert('Lista de Vagas Cadastradas.');
+        let mensagem = '';
+        let id = 0;
+        for (let vaga of vagas) {
+            mensagem += id + ': ' + vaga.nomedavaga + ' - ' + vaga.empresa + ' - ' + vaga.qtdvagas + ' - ' + vaga.regiao + ' - ' + vaga.email +' - ' + '\n'
+            id++;
+        }
+        alert(mensagem);
+    }
+
+    function editar(vagas) {
+        listar(vagas)
+        let id = parseInt(prompt('Qual id você deseja editar?'));
+        let vaga = vagas[id];
+        let nomedavaga = prompt(`Nome da Vaga? [${vaga.nomedavaga}]`);
+        if (nomedavaga == '') {
+            nomedavaga = vaga.nomedavaga;
+        }
+        let empresa = prompt(`Qual Empresa/Órgão? [${vaga.empresa}]`);
+        if (empresa == '') {
+            empresa = vaga.empresa;
+        }
+        let salario = parseInt(prompt(`Qual o Salário? [${vaga.salario}]`));
+        if (salario == '') {
+            salario = vaga.salario;
+        }
+        let qtdvagas = parseInt(prompt(`Quantas Vagas? [${vaga.qtdvagas}]`));
+        if (qtdvagas == '') {
+            qtdvagas = vaga.qtdvagas;
+        }
+        let regiao = prompt(`Qual região? [${vaga.regiao}]`);
+        if (regiao == '') {
+            regiao = vaga.regiao;
+        }
+        let email = prompt(`Que email? [${vaga.email}]`);
+        if (email == '') {
+            email = vaga.email;
+        }
+        let telefone = parseInt(prompt(`Qual telefone? [${vaga.telefone}]`));
+        if (telefone == '') {
+            telefone = vaga.telefone;
+        }
+        let vagaNova = {
+            nomedavaga: nomedavaga,
+            empresa: empresa,
+            salario: salario,
+            qtdvagas: qtdvagas,
+            regiao: regiao,
+            email: email,
+            telefone: telefone
+        }
+        vagas[id] = vagaNova;
+    }
+
+    function apagar(vagas) {
+        listar(vagas);
+        let id = parseInt(prompt('Qual id você quer apagar?'));
+        vagas.splice(id, 1);
+    }
+
+    loop:
+        while (true) {
+            alert('{1}Cadastrar\n{2}Listar\n{3}Editar\n{4}Apagar\n{5}Sair');
+            opcao = prompt('');
+            switch (opcao) {
+                case '1': 
+                    cadastrar(vagasCadastradas);
+                    break;
+                case '2': 
+                    listar(vagasCadastradas);
+                    break;
+                case '3':
+                    editar(vagasCadastradas);
+                    break;
+                case '4':
+                    apagar(vagasCadastradas);
+                    break;
+                case '5': 
+                    alert('SAIR');
+                    break loop;
+           }
+        }
+</script>
